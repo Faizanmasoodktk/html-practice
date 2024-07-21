@@ -144,18 +144,26 @@ footer ul li:hover {
 
 /*================================*/
 /*Main section css*/
- .txt {
+.containers{
+   overflow: hidden;
+   display: flex;
+   width: 100vw;
+   align-items: center;
+   justify-content: center;
+}
+.containers .txt {
    position: relative;
    color: rgb(95, 30, 145);
-   font-size: 300%;
+   font-size: 30px;
    background-color: lightgray;
+   margin-left: 5px;
 }
 
-.first-txt{
+.containers .first-txt{
    color: rgb(27, 21, 207);
 }
 
-.txt.last-txt::before{
+.containers .txt.last-txt::before{
    content: "";
    position: absolute;
    top: 0;
@@ -165,6 +173,7 @@ footer ul li:hover {
    border-left: 2px solid black ;
    background-color: lightgrey;
    animation: dynamic 5s steps(12) infinite;
+   overflow: hidden;
 }
 
 @keyframes dynamic {
