@@ -134,6 +134,22 @@ footer ul li:hover {
    z-index: 2;
 }
 
+/*================================*/
+/*Main section css*/
+.txt {
+   color: rgb(49, 49, 154);
+}
+
+.txt .last-txt{
+   color: rgb(95, 30, 145);
+}
+
+
+
+
+
+
+
 /* .dynamic-txts li span::after{
    content: "";
    position: absolute;
