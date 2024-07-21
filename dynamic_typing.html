@@ -14,11 +14,11 @@
 
 <body>
   <div class='container-fluid'>
-
+	<!-- navbar setting start  -->
     <div class='header col-12 col-lg-12 col-md-12 d-flex'>
 		<div>
 			<span class="logo">I Youtube Downloader</span>
-		  </div>
+		</div>
       <div class='navbar'>
 		
 		 <ul>
@@ -29,12 +29,18 @@
 		</ul>
       </div>
     </div>
+<!-- env of navbar setting-->
 
+<!-- start of main content  -->
     <div class='main'>
-		<span class="txt first-txt">I Am Developer</span>
+	  <div class="containers">
+		<span class="txt first-txt">I am a </span>
 		<span class="txt last-txt">Web Developer</span>
+	  </div>
     </div>
+<!-- End of main content-->
 
+<!-- Start of footer  -->
     <footer class="col-12 col-lg-12 col-md-12 ">
 		<div>
 			<ul>
@@ -47,7 +53,46 @@
 		  <span>&copy;  copyright FMK ,inc</span>
 		</div>
     </footer>
+	<!-- End of footer  -->
 
   </div>
+
+  <script>
+	let skills = ["web Developer", "Frontend Develper", "Python Developer" , "Django Developer"]
+
+	var text = document.querySelector('.last-txt')
+
+	// first approach for showing dynamically skill
+	/* async function load(){
+		let i = 0
+		while(true){
+			if(i>=skills.length){
+				i = 0
+			}
+			text.textContent = skills[i]
+			i += 1
+			await new Promise(resolve => setTimeout(resolve, 5000))// this will sleep the code for 5 second
+		}
+	}
+
+	load() */
+
+	// seond approach for showing dynamically skill
+	const timeout = ()=>{
+		let initial_time = -5000
+		let delayed_time = 5000
+		skills.forEach(skill =>{
+			setTimeout(()=>{
+				text.textContent = skill
+			},(initial_time += delayed_time) )
+		})
+	}
+	timeout();
+	setInterval(timeout, (skills.length * delayed_time));/* this will call the function and set the time interval
+	according to skill length, for-exaple, if skill are 4 the 4 X 5000 = 20000, and their is 
+	a difference of 5s b/w each skill displayed 	*/ 
+
+  </script>
+
 </body>
 </html>
