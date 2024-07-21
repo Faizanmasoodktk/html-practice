@@ -156,11 +156,11 @@ footer ul li:hover {
    color: rgb(95, 30, 145);
    font-size: 30px;
    background-color: lightgray;
-   margin-left: 5px;
 }
 
 .containers .first-txt{
    color: rgb(27, 21, 207);
+   margin-right: 5px;
 }
 
 .containers .txt.last-txt::before{
